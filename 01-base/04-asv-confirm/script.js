@@ -10,15 +10,22 @@
 // You will have time to focus on it later.
 
 (function () {
+    var Age = prompt("How old are you?");
+    var Gender = prompt("What is you gender?", "Male or Female");
+    var Town = prompt("Where do you live");
+    result = confirm("You are " + Age + " years old - " + Gender + " and lives in " + Town);
+    if (result == true) {
+        alert("Thank you for confirming!");
+    }
+    while (result == false) {
         var Age = prompt("How old are you?");
-        var Gender = prompt("What is your gender?", "Male or Female");
-        var Town = prompt("Where do you live?");
+        var Gender = prompt("What is you gender?", "Male or Female");
+        var Town = prompt("Where do you live");
+        result = confirm("Please reconfirm: \n you are " + Age + " years old - " + Gender + " and lives in " + Town);
+        if (result == true) {
+            alert("Thank you for your confirming!");
+        }
+    }
 
-    if (Confirm ("You are " + Age + "years old" + Gender + "and lives in" + Town) == true) {
-        alert("Thank you for confirming");
-    }
-    else if {
-    (Confirm == false)
-        alert("Please confirm")
-    }
-)
+})
+();
