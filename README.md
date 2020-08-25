@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # The fields: JavaScript
+=======
+# SUMMARY README
+>>>>>>> 412ccfa67e1a413712af0dbf311d34c947114aba
 
 ### LEARNING OBJECTIVES
 Learn Javascript
@@ -10,12 +14,17 @@ Learn Javascript
 solo project
 
 ### GOOGLE <3
+<<<<<<< HEAD
 * https://www.c-sharpcorner.com/UploadFile/26b237/dialog-box-in-javascript/
 
+=======
+*
+>>>>>>> 412ccfa67e1a413712af0dbf311d34c947114aba
 
 ##### SOURCE INSTRUCTIONS
 https://github.com/becodeorg/atw-giertz-3-23/tree/master/2.The-Hills/js/js-complete-course
 
+<<<<<<< HEAD
 ## Structure
 
 The file consists of 48 exercises, divided into 9 series.  
@@ -42,3 +51,7 @@ To get the most out of these exercises, some useful resources:
 > END
 
     
+=======
+    
+> End
+>>>>>>> 412ccfa67e1a413712af0dbf311d34c947114aba
