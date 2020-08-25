@@ -13,31 +13,27 @@
 (function () {
 
     document.getElementById("addition").addEventListener("click", function () {
-        var x = document.getElementById("op-one").value;
-        var y = document.getElementById("op-two").value;
-        var addition = parseInt("op-one") + parseInt("op-two");
-        alert(addition);
+        input()
+        alert(numberone + numbertwo);
     });
 
     document.getElementById("substraction").addEventListener("click", function () {
-        var x = document.getElementById("op-one").value;
-        var y = document.getElementById("op-two").value;
-        var substraction = parseInt("op-one") - parseInt("op-two");
-        alert(substraction);
+        input()
+        alert(numberone - numbertwo);
     });
 
     document.getElementById("multiplication").addEventListener("click", function () {
-        var x = document.getElementById("op-one").value;
-        var y = document.getElementById("op-two").value;
-        var multiplication = parseInt("op-one") * parseInt("op-two");
-        alert(multiplication);
+        input()
+        alert(numberone * numbertwo);
     });
 
     document.getElementById("division").addEventListener("click", function () {
-        var x = document.getElementById("op-one").value;
-        var y = document.getElementById("op-two").value;
-        var division = parseInt("op-one") / parseInt("op-two");
-        alert(division);
+        input()
+        alert(numberone / numbertwo);
     });
 
+    function input(){
+        numberone = parseInt(document.getElementById("op-one").value);
+        numbertwo = parseInt(document.getElementById("op-two").value);
+    }
 })();
