@@ -11,14 +11,14 @@
 
 
 // Example: https://stackoverflow.com/questions/1484506/random-color-generator
-(function randomcolor () {
+
+(function () {
 
     run.addEventListener('click', function () {
-        document.body.style.background = document.getElementById("randomcolor").value;
+        for (var x = 0; x <= 6; x++) {
+            randomcolor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            document.body.style.backgroundColor = randomcolor;
+        }
     })
-
-        function randomcolor() {
-            var hex = Math.floor(Math.random()*256).toString(16);
-            return ("0"+String(hex)).substr(-2);
-    })
+})
 ();
