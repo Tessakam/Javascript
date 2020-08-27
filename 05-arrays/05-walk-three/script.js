@@ -45,7 +45,6 @@
         people.forEach(function (name) {
             console.log(name.firstname + " " + name.lastname);
         })
-
     })
 })
 ();
