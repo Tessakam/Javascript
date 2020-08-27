@@ -29,7 +29,8 @@
         fruits[0] = "banana"
         fruits[9] = "kiwi"
 
-        alert(fruits)
+       alert(fruits)
+        //console.log(fruits)
     })
 })
 ();
