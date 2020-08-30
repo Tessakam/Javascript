@@ -14,7 +14,7 @@
 
     run.addEventListener('click', function () {
 
-        var fruits = [
+        let fruits = [
             "apple",
             "pear",
             "raspberry",
@@ -29,8 +29,8 @@
             "cherry",
         ];
 
-        for (var i = 0; i < fruits.length; i++) {
-            console.log(fruits[i])
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
         }
     })
 })
