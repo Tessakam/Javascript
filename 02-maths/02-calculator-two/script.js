@@ -16,7 +16,6 @@
             let x = document.getElementById("op-one").value;
             let y = document.getElementById("op-two").value;
 
-
             switch (operation) {
 
                 case "addition":
