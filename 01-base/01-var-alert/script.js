@@ -9,9 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+    var hello = 'Hello, world!'
+    alert(hello);
+
+    /*
+    alert message with variable and string within quotes, single or double are possible
+
+    Original code
     var sayHello= 'Hello, World!'
     alert("Hello, World!")
-    // your code here
+     */
 
 })();

@@ -12,16 +12,18 @@
 
 
 (function () {
-    var year = 2020 ;
-    //To do: modify - now only for 2020
 
-    for (var month = 0; month < 12; month++) {
-        var date = new Date(year, month, 13);
-        if (date.getDay() === 5) ;
-        {
-            alert(date.toLocaleString('default', {month: 'long';}));
-                }
-    }
+    run.addEventListener('click', function () {
+        var year = parseInt(document.getElementById('year').value);
+
+        for (var month = 0; month < 12; month++) {
+            var date = new Date(year, month, 13);
+            if (date.getDay() === 5) ;
+            {
+                alert(date.toLocaleString('default', {month: 'long'}))
+            }
+        }
+    })
 })
 ();
 

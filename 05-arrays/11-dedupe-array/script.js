@@ -8,6 +8,7 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
+// Example: https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
 
 (function() {
 

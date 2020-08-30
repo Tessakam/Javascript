@@ -12,5 +12,6 @@
 (function () {
 
    target.innerHTML = "Yes, owned again"
+   //id innerhtml = text
 
 })();

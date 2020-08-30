@@ -12,23 +12,25 @@
 (function () {
 
     // to get the value of an input: document.getElementById("element-id").value
-    var input = parseFloat(document.getElementById("number").value);
+    var input = parseInt(document.getElementById("number").value);
 
     document.getElementById("run").addEventListener("click", function () {
 
-        // If num = 0 OR num = 1, the factorial will return 1
         function factorial(input) {
             var result = input;
+
+            // If num = 0 OR num = 1, the factorial will return 1
             if (input === 0 || input === 1)
                 return 1;
 
-            // Step 2. Create the WHILE loop
+            // Create loop
             while (input > 1) {
                 input--; // decrementation by 1 at each iteration
-                result *= input; // or result *= num;
+                result *= input; // or result (x = x * y) num;
             }
             return result;
         }
+
         alert(factorial(input));
     });
 })();

@@ -10,39 +10,42 @@
 // You will have time to focus on it later.
 
 (function () {
-    // to get the value of an input: document.getElementById("element-id").value
+        // to get the value of an input: document.getElementById("element-id").value
 
-      var performOperation = function (operation) {
-          var numberone = document.getElementById("op-one").value;
-          var numbertwo = document.getElementById("op-two").value;
+        let performOperation = function (operation) {
+            let x = document.getElementById("op-one").value;
+            let y = document.getElementById("op-two").value;
 
-console.log(operation);
 
-    switch (operation) {
+            switch (operation) {
 
-        case "addition":
-            var addition = parseInt(numberone) + parseInt(numbertwo);
-            alert(addition);
-            break;
-        case "substraction":
-            var substraction = parseInt(numberone) - parseInt(numbertwo);
-            alert(substraction);
-            break;
-        case "multiplication":
-            var multiplication = parseInt(numberone) * parseInt(numbertwo);
-            alert(multiplication);
-            break;
-        case "division":
-            var division = parseInt(numberone) / parseInt(numbertwo);
-            alert(division);
+                case "addition":
+                    let addition = +x + +y;
+                    alert("Your result is " + addition)
+                    ;
+                    break;
+                case "substraction":
+                    let substraction = x - y;
+                    alert("Your result is " + substraction)
+                    ;
+                    break;
+                case "multiplication":
+                    let multiplication = x * y;
+                    alert("Your result is " + multiplication)
+                    ;
+                    break;
+                case "division":
+                    var division = x / y;
+                    alert("Your result is " + division)
+                    ;
+            }
+        };
+
+        Array.from(document.querySelectorAll("button.operator")).forEach(function ($btn) {
+            $btn.addEventListener("click", function () {
+                performOperation($btn.id);
+            });
+        });
     }
-};
-
-Array.from(document.querySelectorAll("button.operator")).forEach(function ($btn) {
-    $btn.addEventListener("click", function () {
-        performOperation($btn.id);
-    });
-});
-}
 )
 ();

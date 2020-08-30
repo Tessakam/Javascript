@@ -9,7 +9,17 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+// display the square numbers between 1 and 21
+(function () {
+    document.getElementById("run").addEventListener("click", function () {
+        for (let x = 1; x * x <= 21; x++) { // als je x*x niet aanvult, gaat de vierkantswortel verder dan 21
+            alert(x * x)
+        }
+    })
+})
+();
+
+/* Original Code =  list of all square results until 21*21
 
     document.getElementById("run").addEventListener("click", function() {
         var msg = "";
@@ -24,3 +34,4 @@
     });
 
 })();
+ */

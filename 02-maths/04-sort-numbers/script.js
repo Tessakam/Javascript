@@ -9,16 +9,19 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+
 (function () {
 
-    // to get the value of an input: document.getElementById("element-id").value
-    var values = document.getElementById("numbers").value;
-    var newarray = [2, 4, 14, 10, 90, 23, 16];
+       // to get the value of an input: document.getElementById("element-id").value
+       // by splitting it with comma
+        let values = document.getElementById("numbers").value;
+        let splitvalues = values.split(", ");
 
-    document.getElementById("run").addEventListener("click", function () {
+        // On click to the button, get the numbers displayed in the input, and display them sorted in ascending order.
+        document.getElementById("run").addEventListener("click", function () {
 
-        newarray.sort((a, b) => a - b);
-        alert(newarray);
+        splitvalues.sort ((a,b) => a - b);
+        alert("Numbers displayed in ascending order: " + splitvalues);
     });
 });
 

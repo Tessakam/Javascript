@@ -9,14 +9,14 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-    var cake = prompt("Do you want cake?");
+(function () {
+    var cake = prompt("Hello, would you like some cake?\n(yes or no)");
 
-    if (cake == "yes") {
-        alert("Congratulations!");}
-    else {
-        alert("More cake for me then :p");}
-
-  // your code here
-
-})();
+    if (cake === "yes") {
+        alert("Congratulations!");
+    }
+    else { //No need to add "no" statement!
+        alert("Too bad, more cake for me then!");
+    }
+})
+();

@@ -10,22 +10,20 @@
 // You will have time to focus on it later.
 
 (function () {
-    var Age = prompt("How old are you?");
-    var Gender = prompt("What is you gender?", "Male or Female");
-    var Town = prompt("Where do you live");
-    result = confirm("You are " + Age + " years old - " + Gender + " and lives in " + Town);
-    if (result == true) {
-        alert("Thank you for confirming!");
-    }
-    while (result == false) {
-        var Age = prompt("How old are you?");
-        var Gender = prompt("What is you gender?", "Male or Female");
-        var Town = prompt("Where do you live");
-        result = confirm("Please reconfirm: \n you are " + Age + " years old - " + Gender + " and lives in " + Town);
-        if (result == true) {
-            alert("Thank you for your confirming!");
-        }
-    }
+    var age = prompt("What is your age?");
+    var gender = prompt("What is your gender?","Female, male or other");
+    var town = prompt ("Where do you live?");
+    answer = confirm ("Your are " + age + " years, gender " + gender + " and live in " + town +".\nIs that correct?");
 
-})
+    if (answer === true) {
+        alert ("Thank you for confirming");
+    }
+    while (answer === false) { // you can add 2th statement - not possible with if/else
+        var age = prompt("What is your age?");
+        var gender = prompt("What is your gender?","Female, male or other");
+        var town = prompt ("Where do you live?");
+        answer = confirm ("Your are " + age + " years, gender " + gender + " and live in " + town +".\nIs that correct?");
+        alert("Thank you for re-confirming")
+    }
+    })
 ();
