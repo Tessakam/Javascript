@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (function () {
-    var hello = 'Hello, world!'
+    var hello = "Hello, World!";
     alert(hello);
 
     /*
