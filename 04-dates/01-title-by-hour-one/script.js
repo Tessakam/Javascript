@@ -11,8 +11,8 @@
 
 //   before 18h: Hello
 //   after 18h: Good evening
-//Example: https://www.w3schools.com/jsref/jsref_gethours.asp
 // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+//Example: https://www.w3schools.com/jsref/jsref_gethours.asp
 
 (function() {
     var date = new Date();
