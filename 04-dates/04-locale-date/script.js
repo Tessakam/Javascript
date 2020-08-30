@@ -22,9 +22,9 @@
 
         const event = new Date(currentDate);
         const options = {dayofweek: 'long', day: 'numeric', month: 'long', year: 'numeric', hour: 'numeric'};
-        console.log(event.toDateString(('BE-EN', options)));
+        console.log(event.toDateString(('BE-ENG', options)));
 
-        document.getElementById("target").innerHTML = ("What day is it today?\n" + event.toDateString()+ ", " + hour + "h" + minutes + ".");
+        document.getElementById("target").innerHTML = ("What day is it today?\n" + event.toDateString() + ", " + hour + "h" + minutes + ".");
     }
 )
 ();
