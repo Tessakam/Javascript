@@ -14,7 +14,7 @@
 // Example https://www.w3schools.com/jsref/jsref_gethours.asp
 // Example && https://sabe.io/classes/javascript/logic-conditionals
 
-(function() {
+(function () {
 
     var date = new Date();
     var hours = date.getHours();
