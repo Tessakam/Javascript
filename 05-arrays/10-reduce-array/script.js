@@ -13,7 +13,7 @@
 
     run.addEventListener('click', function () { // when you click the button
 
-        var people = [
+        let people = [
             {
                 firstname: "Grenville",
                 lastname: "Stive",
@@ -90,7 +90,7 @@
                 age: 81,
             },
         ];
-        var arrayage = people.reduce(function (a, b) {
+        let arrayage = people.reduce(function (a, b) {
             return a + b.age;
         }, 0)
         console.log(arrayage)
