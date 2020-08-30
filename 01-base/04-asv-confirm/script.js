@@ -13,7 +13,7 @@
     var age = prompt("What is your age?");
     var gender = prompt("What is your gender?","Female, male or other");
     var town = prompt ("Where do you live?");
-    answer = confirm ("Your are " + age + " years, gender " + gender + " and live in " + town +".\nIs that correct?");
+    answer = confirm ("Your are " + age + " years old, gender " + gender + " and live in " + town +".\nIs that correct?");
 
     if (answer === true) {
         alert ("Thank you for confirming");
@@ -22,7 +22,7 @@
         var age = prompt("What is your age?");
         var gender = prompt("What is your gender?","Female, male or other");
         var town = prompt ("Where do you live?");
-        answer = confirm ("Your are " + age + " years, gender " + gender + " and live in " + town +".\nIs that correct?");
+        answer = confirm ("Your are " + age + " years old, gender " + gender + " and live in " + town +".\nIs that correct?");
         alert("Thank you for re-confirming")
     }
     })
