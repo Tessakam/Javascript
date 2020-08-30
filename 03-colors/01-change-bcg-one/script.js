@@ -10,7 +10,6 @@
 // You will have time to focus on it later.
 
 //Example: https://stackoverflow.com/questions/197748/how-do-i-change-the-background-color-with-javascript
-
 (function() {
 
     red.addEventListener('click', function () {
@@ -28,5 +27,4 @@
     blue.addEventListener('click', function () {
         document.body.style.background = "blue";
     });
-
 })();
