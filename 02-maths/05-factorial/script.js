@@ -23,7 +23,7 @@
             if (input === 0 || input === 1)
                 return 1;
 
-            // Create loop
+            // Create while loop
             while (input > 1) {
                 input--; // decrementation by 1 at each iteration
                 result *= input; // or result (x = x * y) num;
