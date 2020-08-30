@@ -14,7 +14,7 @@
 
     run.addEventListener('click', function () {
 
-        var people = [
+        let people = [
             {
                 firstname: "Garald",
                 lastname: "Freschi",
