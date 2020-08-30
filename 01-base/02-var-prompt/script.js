@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (function() {
-    var name = prompt ("Enter your name?");
+    var name = prompt ("Enter your name:");
     alert("Hello, " + name + "!");
 
 })();
