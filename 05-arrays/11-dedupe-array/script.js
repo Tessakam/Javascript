@@ -10,11 +10,11 @@
 // You will have time to focus on it later.
 // Example: https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
 
-(function() {
+(function () {
 
     run.addEventListener('click', function () {
 
-        var fruits = [
+        let fruits = [
             "cerise",
             "durian",
             "pomme",
@@ -30,7 +30,7 @@
             "raisin",
             "cerise",
         ];
-        var uniquefruit = [...new Set(fruits)];
+        let uniquefruit = [...new Set(fruits)];
         console.log(uniquefruit);
     })
 })
