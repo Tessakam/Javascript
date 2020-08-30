@@ -17,9 +17,9 @@
     var month = currentDate.getMonth();
     var year = currentDate.getFullYear();
 
-    var inputday = parseInt(document.getElementById('dob-day').value);
-    var inputmonth = parseInt(document.getElementById('dob-month').value);
-    var inputyear = parseInt(document.getElementById('dob-year').value);
+    var inputday = (document.getElementById('dob-day').value);
+    var inputmonth = (document.getElementById('dob-month').value);
+    var inputyear = (document.getElementById('dob-year').value); // parseInt(document...) not necessary?
 
     var age = year - inputyear;
 
@@ -28,5 +28,5 @@
         )
     })
 })
-    ();
+();
 
