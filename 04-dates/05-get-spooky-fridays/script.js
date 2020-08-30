@@ -18,7 +18,7 @@
         let year = document.getElementById("year").value;
 
         for (i = 0; i < 12; i++) {
-            let date = new Date(year, i, 13);
+            let date = new Date(year, i, 13); // new Date(x,y,z) = to go back in time
             if (date.getDay () === 5) ; // ma tem vrijdag
             {
                 console.log(date.getMonth);
