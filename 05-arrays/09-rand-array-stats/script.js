@@ -17,11 +17,11 @@
 
     run.addEventListener('click', function () { // when you click the button
 
-        var table = document.querySelectorAll('td') // select whole table > Tip from Kayalin: instead of document.getElementById use querySelectorAll
+        let table = document.querySelectorAll('td') // select whole table > Tip from Kayalin: instead of document.getElementById use querySelectorAll
 
-        var numbers = [];
+        let numbers = [];
         for (i = 0; i < 10; i++) {
-            var random = Math.floor(Math.random() * 100); // display between 1 and 100
+            let random = Math.floor(Math.random() * 100); // display between 1 and 100
             numbers.push(random);
             console.log(table, numbers); // display elements in table, between 1-100
         }
@@ -31,15 +31,15 @@
         }
 
         numbers.sort((a, b) => a - b); // sort numbers for definition list
-        var minimum = document.getElementById("min").innerHTML = numbers[0];
-        var maximum = document.getElementById("max").innerHTML = numbers[9];
+        let minimum = document.getElementById("min").innerHTML = numbers[0];
+        let maximum = document.getElementById("max").innerHTML = numbers[9];
 
-        var arraysum = numbers.reduce(function (a, b) {
+        let arraysum = numbers.reduce(function (a, b) {
             return a + b;
         }, 0);
         document.getElementById("sum").innerHTML = arraysum
 
-        var arrayaverage = numbers.reduce(function (a, b) {
+        let arrayaverage = numbers.reduce(function (a, b) {
             return a + b;
         }, 0) / numbers.length;
         document.getElementById("average").innerHTML = arrayaverage
