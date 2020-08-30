@@ -10,12 +10,11 @@
 // You will have time to focus on it later.
 
 (function () {
-
     run.addEventListener('click', function () {
 
-        var fruits = [
-            "pomme",
-            "poire",
+        let fruits = [
+            "pomme", //0
+            "poire", //1
             "fraise",
             "tomate",
             "orange",
@@ -23,11 +22,11 @@
             "durian",
             "pêche",
             "raisin",
-            "cerise",
+            "cerise", //9
         ];
 
-        fruits[0] = "banana"
-        fruits[9] = "kiwi"
+        fruits[0] = "banana" // add an element "banana" at the start of the array
+        fruits[9] = "kiwi" // add an element "kiwi" at the end = replace cerise
 
        alert(fruits)
         //console.log(fruits)
