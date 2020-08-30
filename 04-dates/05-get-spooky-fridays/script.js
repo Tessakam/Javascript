@@ -14,13 +14,15 @@
 (function () {
 
     run.addEventListener('click', function () {
-        var year = parseInt(document.getElementById('year').value);
 
-        for (var month = 0; month < 12; month++) {
-            var date = new Date(year, month, 13);
-            if (date.getDay() === 5) ;
+        let year = document.getElementById("year").value;
+
+        for (i = 0; i < 12; i++) {
+            let date = new Date(year, i, 13);
+            if (date.getDay () === 5) ; // ma tem vrijdag
             {
-                alert(date.toLocaleString('default', {month: 'long'}))
+                console.log(date.getMonth);
+                alert (date.toLocaleString('default', {month: 'long'}))
             }
         }
     })
