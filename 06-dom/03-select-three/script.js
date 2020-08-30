@@ -12,7 +12,7 @@
 // Example https://stackoverflow.com/questions/21813122/changing-content-of-class-using-javascript/21813259
 
 (function () {
-    var message = document.querySelectorAll(".target"); // add . for multiple classes!
+    let message = document.querySelectorAll(".target"); // add . for multiple classes!
     for (i = 0; i < message.length; i++) {
         message[i].innerHTML = "owned";
     }
