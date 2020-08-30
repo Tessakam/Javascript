@@ -30,8 +30,6 @@
             var msg  = msg + square + "\n";
         }
         alert(msg);
-
     });
-
 })();
  */
