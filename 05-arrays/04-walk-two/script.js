@@ -14,7 +14,7 @@
 
     run.addEventListener('click', function () {
 
-        var fruits = [
+        let fruits = [
             "pomme",
             "poire",
             "fraise",
