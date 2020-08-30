@@ -16,7 +16,7 @@
         // to get the value of an input: document.getElementById("element-id").value
         let x = document.getElementById("op-one").value;
         let y = document.getElementById("op-two").value;
-        let addition = (+x + +y); //(x + y) wordt bij 1 + 1 = 11 // oplossen door + ervoor te zetten
+        let addition = (+x + +y); //(x + y) wordt bij 1 + 1 = 11 -> oplossen door + ervoor te zetten
         alert(addition)
     })
 
