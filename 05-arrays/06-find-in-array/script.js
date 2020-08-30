@@ -13,7 +13,7 @@
 
     run.addEventListener('click', function () {
 
-        var people = [
+        let people = [
             {
                 firstname: "Bradford",
                 lastname: "Coldbath",
@@ -95,7 +95,7 @@
 
             if (name.firstname === "Jean" && name.lastname === "Dupont") {
                 console.log(name.email);
-                console.log(people.indexOf(name));
+                console.log(people.indexOf(name)); // hoeveelste van de groep
             }
         })
     })
