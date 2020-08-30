@@ -93,6 +93,7 @@
         ];
 
         var adults = [];
+
         function search(age, people) {
             for (i = 0; i < people.length; i++) {
                 if (people[i].age >= age) {
@@ -100,7 +101,8 @@
                 }
             }
         }
-        search (18, people);
+
+        search(18, people);
         console.log(adults);
     })
 })
