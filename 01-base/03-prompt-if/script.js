@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (function () {
-    var cake = prompt("Hello, would you like some cake?\n(yes or no)");
+    var cake = prompt("Hello, would you like some cake?\n(Answer with 'yes' or 'no')");
 
     if (cake === "yes") {
         alert("Congratulations!");
