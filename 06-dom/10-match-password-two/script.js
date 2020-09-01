@@ -9,21 +9,18 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-
 (function () {
 
     run.addEventListener('click', function () {
 
-            let password1 = document.getElementById("pass-one").value;
-            let password2 = document.getElementById("pass-two").value;
+        let password1 = document.getElementById("pass-one");
+        let password2 = document.getElementById("pass-two");
 
-            if (password1 === password2) {
-                alert("Password is valid");
-            }
-            else
+        if (password1.value !== password2.value) {
+
             password1.classList.add("error");
             password2.classList.add("error");
         }
-    )
+    })
 })
 ();
