@@ -11,7 +11,7 @@
 
 //Exmple https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_typewriter
 
-(function () {
+(function () { //to check undefined
 
     //select target and display new text
     let target = document.getElementById("target");
