@@ -25,20 +25,32 @@
 
         //if you click on button 1, then + is replaced by 0
         let target = document.getElementById("target");
-        target.innerHTML = "0" + buttonOne.innerHTML
+        target.innerHTML = "0" + buttonOne.innerHTML + (" ") + buttonTwo.innerHTML
     }
 
     buttonOne.addEventListener("click", function () { // tip from Felix: use if (value < buttonOne.dataset.max)
-
             value = buttonOne.innerHTML
 
             if (value < buttonOne.dataset.max) {
                 value++;
-                buttonOne.innerHTML = value;
-            } else {
-                buttonOne.innerHTML = buttonOne.dataset.min;
+                buttonOne.innerHTML = value;}
+            else {
+                buttonOne.innerHTML = buttonOne.dataset.min; //springt van 499 terug naar 460
             }
             plus()
         }
     )
-})();
+
+    buttonTwo.addEventListener("click", function () {
+        value = buttonTwo.innerHTML
+
+        if (value < buttonTwo.dataset.max) {
+            value++;
+            buttonTwo.innerHTML = value;}
+        else {
+            buttonTwo.innerHTML = buttonTwo.dataset.min;
+        }
+        plus()
+})
+})
+();
