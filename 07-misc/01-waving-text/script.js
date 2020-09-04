@@ -11,27 +11,24 @@
 
 
 (function () {
-    // Display some text inside the target element = replace text
     let target = document.getElementById("target");
-    // Separate all the words
-    let characters = target.innerText.split(" ");
+    // Separate all the words to create the "wave effect"
+    let characters = target.innerText.split(" "); // empty target to fill it with letters
 
-    //create loop for characters by using span
-    wave = [];
+        wave = []; // empty array for span , numbers of letters)
     for (let i = 0; i < characters.length; i++) {
         let span = '<span>' + characters[i] + '</span>';
         wave.push(span)
     }
 
     // using at least 5 different font sizes.
-    let fontsize = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+    let fontsize = [1, 3, 5, 2, 4];
     document.getElementById("target").innerHTML = wave;
 
     characters = document.getElementsByTagName("span");
     for (let i = 0; i < characters.length; i++) {
         let x = i + 1;
-        characters[x].style.fontSize = fontsize[i % fontsize.length] + "1px";
+        characters[i].style.fontSize = fontsize[i % fontsize.length] + "1px";
     }
 })
 ();
-//let sentence = characters.join(" ");
