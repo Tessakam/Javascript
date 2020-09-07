@@ -11,13 +11,13 @@
 
 (() => {
     document.getElementById("run").addEventListener("click", () => {
-        window.lib.getPosts((error, article) => {
+        window.lib.getPosts((error, posts) => {
             if (error) {
                 console.log(1);
             } else {
                 console.log(null);
-                article.forEach(art => {
-                    window.lib.getComments(art.id, (error, table) => {
+                posts.forEach(post => {
+                    window.lib.getPosts(art.id, (error, table) => {
                         if (error) {
                             console.log(1);
                         } else {
@@ -33,7 +33,7 @@
 })
 ();
 /*
-In class:
+Classical - review
 document.getElementById("run").addEventListener("click", () => {
     function getPostsWithComments() {
         window.lib.getPosts(error, posts)
