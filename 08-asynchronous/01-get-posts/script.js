@@ -9,25 +9,8 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-
-// After a short delay, the callback will be executed with two parameters:
-// the first contains an error (if there is one, otherwise null),
-// the second an array of articles.
-
-
-//The window.lib.getPosts() function is available in the script.
-// It must receive a callback parameter.
-
-// After a short delay --> see getPosts function
-// the callback will be executed with two parameters:
-// the first contains an error (if there is one, otherwise null),
-// the second an array of articles. At the click of the button
-// call the getPosts function and display the items obtained in the console
-// (the getPosts function never returns an error).
-
 // Parameter 1 = error // no error = null
 // Parameter 2 = article
-
 
 (() => {
 
