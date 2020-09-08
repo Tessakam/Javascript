@@ -15,7 +15,7 @@
     // When you click on the button, call the getPosts function and
     document.getElementById("run").addEventListener("click",() => {
 
-        new Promise ((resolve, reject) => {
+        new Promise ((resolve) => { // reject is not necessary here
 
             // It returns a Promise that will be resolved,
             resolve(window.lib.getPosts());
