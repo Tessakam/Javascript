@@ -12,6 +12,27 @@
 
 (() => {
 
+    document.getElementById("run").addEventListener("click", (async) => {
+
+        async function async () {
+            // await makes JavaScript wait until that promise settles and returns its result.
+            // Tip from Michiel, use Try and catch
+            try {
+                let result = await window.lib.getPosts();
+                console.log(result)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+    })
+})
+();
+
+/*
+----
+original code : not correct (
+   (() => {
+
     let promise = new Promise((resolve) => {
         console.log(resolve);
 
@@ -23,3 +44,4 @@
         })
     })
 })();
+*/
