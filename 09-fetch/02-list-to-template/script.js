@@ -18,30 +18,26 @@
 
 (() => {
 
-    // Using HTML templates - create a copy of the content
-    let tmpl = document.getElementById('comment-template');
-    document.body.appendChild(tmpl.content.cloneNode(true));
-    //console.log(template)
-
-    // Get a reference to the Xmen list in the main DOM.
-    let commentsList = document.getElementById('comment');
-
-    // Loop through each of the comments and add them to the comments list.
-    for (var i = 0; i < comments.length; i++) {
-        var comment = comments[i];
-        var tmpl = document.getElementById('template').content.cloneNode(true);
-        tmpl.querySelector('.comment-author').innerText = comment.author;
-        tmpl.querySelector('.comment-body').innerText = comment.body;
-        commentsList.appendChild(tmpl);
-
     document.getElementById("run").addEventListener("click", () => {
 
         fetch('http://localhost:3000/heroes')
             .then(response => response.json())
-            .then(data => console.log(data))
+            .then(tmpl => showXmen (tmpl))
+        console.log(showXmen)
     })
-    //document.getElementById("target").innerHTML = "heroes"
-}})
+
+    function showXmen (tmpl) {
+
+    // Loop through each of the heroes and add them to the Xmen list.
+    for (let i = 0; i < tmpl.length; i++) {
+        let list = tmpl[i];
+        let xmen = document.getElementById('tpl-hero').content.cloneNode(true); //  retrieve the list of X-Men see HTML id template
+        xmen.querySelector('.name').innerText = list.name;
+        xmen.querySelector('.alter-ego').innerText = list.alterEgo; // !don't use alter-ego, see result
+        xmen.querySelector('.powers').innerText = list.abilities;
+        target.appendChild(xmen); // and display it in the tag whose id is "target"
+
+}}})
 ();
 
 
