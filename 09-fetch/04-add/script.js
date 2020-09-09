@@ -13,19 +13,18 @@
     document.getElementById("run").addEventListener("click", newHeroes)
     // When you click on the button, retrieve the values of the form and create the new hero in the API.
 
+    fetch('http://localhost:3000/heroes')
+        .then(response => response.json())
+        .then(input => newHeroes(input))
+
     function newHeroes(input) {
-        let name = document.querySelectorAll("#hero-name").value
-        let alterEgo = document.querySelectorAll("#hero-alter-ego").value
-        let power = document.querySelectorAll("#hero-powers").value
+        let name = document.querySelectorAll("#hero-name").value;
+        let alterEgo = document.querySelectorAll("#hero-alter-ego").value;
+        let power = document.querySelectorAll("#hero-powers").value;
         let addHero = input.length + 1;
 
-        console.log(input)
-
-        /*fetch('http://localhost:3000/heroes')
-            .then(response => response.json())
-            .then(input => newHeroes(input))
-            */
+        console.log("id: "+ addHero +"\nname: " + "\nalterEgo: " + alterEgo + "\nabilities: " + power)
     }
-})
+    })
 ();
 
