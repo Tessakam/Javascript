@@ -15,17 +15,36 @@
 
 
 (() => {
-    let getUserChoice(userInput) => {
+
+    function getUserChoice(userInput) {
+
+        //cover rock and Rock
+        userInput = userInput.toLowerCase();
 
         if (userInput === "rock" || userInput === "paper" || userInput === "scissors") {
             return userInput;
         } else {
-            console.log("Error!\nPlease use only 'rock, paper or scissors'");
+            return console.log("Error!\nPlease use only 'rock, paper or scissors'");
         }
     }
-    userInput()
+    console.log(getUserChoice("paper"))
+    console.log(getUserChoice("test"))
+
+
+    function getComputerChoice () {
+        let randomNumber = Math.floor(Math.random() * 3);
+
+        switch(randomNumber){
+            case "0":
+                return "rock";
+            case "1":
+                return "paper";
+            case "2":
+                return "scissors";
+        }
+          }
+          console.log(getComputerChoice)
+
 })
 ();
 
-/*cover rock and Rock
-userInput = userInput.toLowerCase();*/
