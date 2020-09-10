@@ -1,18 +1,3 @@
-// Rock paper scissors is a 2 player game.
-// Rules: player chooses the most powerful item wins.
-
-// The possible outcomes are:
-// 1) Rock destroys scissors.
-// 2) Scissors cut paper.
-// 3) Paper covers rock.
-// If there’s a tie, then the game ends in a draw.
-
-// Structure:
-// 1) Get users choice
-// 2) Get computers choice
-// 3) Compare the 2 choices and determine the winner
-// 4) Start program and dispay results
-
 // Requirements
 // [x] Have three buttons that the player can press to change their pick
 // [x] Have another button to let the computer pick one and show the winner
@@ -28,13 +13,21 @@
 // [ ] Add complex rules
 
 (() => {
-    //assign all buttons
-    document.getElementById("rock")
-    let myChoiceButton = document.getElementById('rock').innerHTML
-    let myChoiceInput = document.getElementById('rock').innerHTML
-    
+    //user clicks on the button + shows in text description
+    document.getElementById("rock").addEventListener("click", () => {
+        document.getElementById("input").innerText = "rock"
+    });
 
-    function getUserChoice(userInput) {
+    document.getElementById("paper").addEventListener("click", () => {
+        document.getElementById("input").innerText = "paper";
+    });
+
+    document.getElementById("scissors").addEventListener("click", () => {
+        document.getElementById("input").innerText = "scissors";
+    });
+
+    function getUserChoice() {
+        let userInput = document.getElementById("input").innerHTML
 
         //cover rock and Rock
         userInput = userInput.toLowerCase();
@@ -42,10 +35,10 @@
         if (userInput === "rock" || userInput === "paper" || userInput === "scissors") {
             return userInput;
         } else {
-            return console.log("Error!\nPlease use only 'rock, paper or scissors'");
+            return prompt("Error!\nPlease use only 'rock, paper or scissors'");
         }
+        //console.log(getUserChoice("test"))
     }
-    //console.log(getUserChoice("test"))
 
     function getComputerChoice() {
 
@@ -61,6 +54,7 @@
                 console.log("invalid")
         }
 
+        //Determine the winner
         function compare(getUserChoice, getComputerChoice) {
             if (getUserChoice === getComputerChoice) {
                 return "It's a draw, play again!"
@@ -86,8 +80,14 @@
             }
         }
     }
+
     /*reset bottom
     document.getElementById("reset").reset();*/
+
+    //you win: popup congrats
+    $(document).ready(function () {
+        $('.image-link').magnificPopup({type: 'image'});
+    });
 
 })
 ();
