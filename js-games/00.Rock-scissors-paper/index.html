@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>Game Rock paper scissors</title>
 </head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8"/>
 <title>BeCode/JavaScript - Let the games begin!</title>
 
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
-<link rel="stylesheet" href="../../_shared/css/normalize.css" />
-<link rel="stylesheet" href="../../_shared/css/styles.css" />
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+<link rel="stylesheet" href="../../_shared/css/normalize.css"/>
+<link rel="stylesheet" href="../../_shared/css/styles.css"/>
 <body>
 
 <div class="container">
@@ -20,27 +20,45 @@
             <strong>Game time!</strong>
         </h2>
     </header>
+
     <div class="content">
         <section class="explain">
-            <p>Instructions game <strong>xxx</strong></p>
+            <p>Instructions game</p>
+            <p><strong>Rules</strong>: player chooses the most powerful item wins.<br><br>The possible outcomes are:</p>
+            <ol>
+                <li>Rock destroys scissors.</li>
+                <li>Scissors cut paper.</li>
+                <li>Paper covers rock.</li>
+                <li>If there’s a tie, then the game ends in a draw.</li>
+            </ol>
         </section>
+
         <section class="material">
             <form action="#" method="post">
                 <div class="field">
-                    <label for="RPS-id">Rock, paper or scissors?</label>
-                    <input type="text" name="Rock, paper or scissors?" id="RPS-id" />
-                </div>
-                <div class="actions">
-                    <button type="button" id="run">Play!</button>
+                    <label for="description">Rock, paper or scissors?</label>
+                    <input type="text" name="Rock, paper or scissors?" id="description"/>
                 </div>
 
-                <div class="pic">
-                    <img id=pic src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/people-playing-paper-rock-scissors-royalty-free-illustration-1583269312.jpg?crop=0.994xw:0.799xh;0.00160xw,0.195xh&resize=1600:*"
-                         alt="picture" width="200px">
+                <div class="gif">
+                    <img id=gif
+                         src="https://media.giphy.com/media/3osxYfP8SJVa9XpVyo/giphy.gif"
+                         alt="gif" width="200px">
+                </div>
+
+                <div class="actions">
+                    <button type="button" class="game" id="rock">Rock</button>
+                    <button type="button" class="game" id="Paper">Paper</button>
+                    <button type="button" class="game" id="scissors">Scissors</button>
+                    <br>
+                    <button type="button" class="game" id="play">Play with the computer!</button>
+                    <button type="button" class="game" id="reset">Reset!</button>
                 </div>
             </form>
         </section>
     </div>
-</div><script src="./script.js"></script>
+</div>
+
+<script src="./script.js"></script>
 </body>
 </html>
