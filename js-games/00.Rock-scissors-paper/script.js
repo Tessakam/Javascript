@@ -14,12 +14,10 @@
 
 (() => {
 
-    let computerSelection = "";
-    let result = "Tessa";
-    //output scores to the DOM
-    let playerScore = 0;
-    let computerScore = 0;
-    let playerSelection = 0;
+    let playerSelection = "";
+    let result = "";
+    let playerScore = "";
+    let computerScore = "";
 
     document.getElementById("rock").addEventListener("click", () => {
         playerSelection = "rock";
@@ -34,47 +32,42 @@
         playGame()
     });
 
+    //score appears after pressing buttons
     let score = document.getElementById("score");
     let scoreboard = document.getElementById("scoreboard");
 
     function playGame() {
-         //setup a random number by computer
+        //setup a random number by computer
+        let computerSelection = Math.floor(Math.random() * 3);
 
-        let computerRandom = Math.floor(Math.random());
-
-        if (computerRandom < 0.34) {
+        if (computerSelection < 0.34) {
             computerSelection = "rock";
-        } else if (computerRandom <= 0.67) {
+
+        } else if (computerSelection <= 0.67) {
             computerSelection = "paper";
         } else {
             computerSelection = "scissors";
         }
-        console.log(computerSelection);
+        console.log("computerSelection", computerSelection);
         checkWinner();
-
         //setup a function to compare winners and return result
 
-        console.log(result);
+        console.log(checkWinner);
         if (checkWinner() === "player") {
-            result = " wins!";
+            result += " wins!";
             playerScore++; //update score
-        }
-
-        else if (checkWinner() === "computer") {
-            result = " wins!";
+        } else if (checkWinner() === "computer") {
+            result += " wins!";
             computerScore++;
-        }
-
-        else {
+        } else {
             result = "It's a draw!"
         }
 
-
         //output score into div score and scoreboard
-        score.innerHTML = "player: [ " + computerScore + " ] computer: [ " + computerScore + " ]";
+        score.innerHTML = "Player: [ " + computerScore + " ] Computer: [ " + computerScore + " ]";
 
         //output player and computer's selections
-        scoreboard.innerHTML = "Player: [ " + playerSelection + " ] computer: [ " + computerSelection + " ]" + result
+        scoreboard.innerHTML = "Player: [ " + playerSelection + " ] Computer: [ " + computerSelection + " ]"
     }
 
     //Determine the winner

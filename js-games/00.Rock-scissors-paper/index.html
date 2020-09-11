@@ -14,7 +14,7 @@
 
 <div class="container">
     <header>
-        <h1>BeCode / JavaScript Games</h1>
+        <h1>BeCode / JavaScript</h1>
         <h2>
             <span>00.</span>
             <strong>Game time!</strong>
@@ -33,28 +33,32 @@
             </ol>
         </section>
 
-        <section class="material">
-            <form action="#" method="post">
-                <div class="field">
-                    <label>Complete the field with "Rock, paper or scissors" <br> Press the button "Play with the computer!"</label>
-                    <input type="text" name="Rock, paper or scissors?" id="input"/>
-                </div>
+        <section class="check winner">
+        <div class="score" id="score"></div>
+        <div class="scoreboard" id="scoreboard"></div>
+        <h1></h1><br>
+        </section>
 
-                <div class="gif">
+        <section>
+        <form action="#" method="post">
+                               <div class="gif">
                     <img id=gif
                          src="https://media.giphy.com/media/3osxYfP8SJVa9XpVyo/giphy.gif"
-                         alt="gif" width="200px">
-                </div>
-
-                <a class="image-link" href="https://previews.123rf.com/images/octyabr/octyabr1804/octyabr180400115/100326571-congrats-hand-written-lettering-for-congratulations-card-modern-brush-calligraphy-isolated-on-backgr.jpg">Open popup</a>
+                         alt="gif" width="300px">
+                </div>/
 
                 <div class="actions">
                     <button type="button" class="game" id="rock">Rock</button>
                     <button type="button" class="game" id="paper">Paper</button>
                     <button type="button" class="game" id="scissors">Scissors</button>
-                    <br>
-                    <button type="button" class="game" id="play">Play with the computer!</button>
-                    <button type="button" class="game" id="reset">Reset!</button>
+                </div>
+
+                <div class="field">
+                    <p>Select either rock, paper, or scissors and see if you can beat the computer!</p>
+                    <input type="text" name="Rock, paper or scissors?" id="input"/>
+                </div>
+                <div class="actions">
+                    <button type="button" class="computer" id="random">Play with the computer!</button>
                 </div>
             </form>
         </section>
