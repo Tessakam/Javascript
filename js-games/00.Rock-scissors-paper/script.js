@@ -58,54 +58,53 @@
             computerSelection = "scissors";
         }
         console.log("computerSelection: ", computerSelection);
-        checkWinner();
 
         //setup a function to compare winners and return result
         if (checkWinner() === "player") {
-            result += " wins!";
+            result = " wins!";
             return playerScore++; //update score
         } else if (checkWinner() === "computer") {
-            result += " wins!";
+            result = " wins!";
             return computerScore++;
         } else {
-            result = "It's a draw!"
+            result = "It's a draw, try again!!"
         }
         console.log("who is the winner?", result)
+        checkWinner();
 
         //output player and computer's selections
         let score = document.getElementById("score");
-        score.innerHTML = "PLAYER: [ " + playerSelection + " ] COMPUTER: [ " + computerSelection + " ]"
+        score.innerHTML = "PLAYER: [ " + playerSelection + " ]  COMPUTER: [ " + computerSelection + " ]"
         let compare = document.getElementById("compare");
-        compare.innerHTML = "Who is the winner?";
+        compare.innerHTML = "Who is the winner?" + " " + (checkWinner(playerSelection, computerSelection));
 
         //let scoreboard = document.getElementById("scoreboard");
-        //scoreboard.innerHTML = "Player: [ " + computerScore + " ]\n Computer: [ " + computerScore + " ]";
+        //scoreboard.innerHTML = "Scoreboard: Player: [ " + computerScore + " ] Computer: [ " + computerScore + " ]";
     }
 
     //Determine the winner
     function checkWinner(playerSelection, computerSelection) {
         if (playerSelection === computerSelection) {
-            return "draw!"
+            return "It's a draw, try again!!"
 
         } else if (playerSelection === "rock") {
             if (computerSelection === "scissors") {
-                return "player"
+                return "YOU WIN"
             } else if (computerSelection === "paper") {
-                return "computer";
+                return "Too bad, you lose";
             }
         } else if (playerSelection === "paper") {
             if (computerSelection === "scissors") {
-                return "player!"
+                return "YOU WIN!"
             } else if (computerSelection === "rock") {
-                return "player";
+                return "YOU WIN";
             }
         } else if (playerSelection === "scissors") {
             if (computerSelection === "paper") {
-                return "player!"
+                return "YOU WIN!"
             } else if (computerSelection === "rock") {
-                return "computer";
+                return "Too bad, you lose";
             }
-            console.log(checkWinner)
         }
     }
 
