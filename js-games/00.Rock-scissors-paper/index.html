@@ -11,6 +11,15 @@
 <link rel="stylesheet" href="../../_shared/css/normalize.css"/>
 <link rel="stylesheet" href="../../_shared/css/styles.css"/>
 <body>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+</style>
 
 <div class="container">
     <header>
@@ -58,7 +67,8 @@
                     <input type="text" name="Rock, paper or scissors?" id="input"/>
                 </div>
                 <div class="actions">
-                    <button type="button" class="computer" id="random">Play with the computer!</button>
+                    <button type="button" class="computer" id="play">Play with the computer!</button>
+                    <button type="button" class="reset" id="reset">Reset</button>
                 </div>
             </form>
         </section>

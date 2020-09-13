@@ -6,8 +6,8 @@
 
 // Nice-to-have
 // [ ] Nice graphics
-// [ ] Let the player input using a text field
-// [ ] Show what the player picked by highlighting the correct button
+// [x] Let the player input using a text field
+// [x] Show what the player picked by highlighting the correct button
 // [ ] Add more options (spock, ...)
 // [ ] Add even more options (but avoid using 100 if statements)
 // [ ] Add complex rules
@@ -19,6 +19,7 @@
     let playerScore = "";
     let computerScore = "";
 
+    // Selection player via buttons
     document.getElementById("rock").addEventListener("click", () => {
         playerSelection = "rock";
         playGame()
@@ -31,10 +32,28 @@
         playerSelection = "scissors";
         playGame()
     });
+    // Input from player via textfield
+    document.getElementById("play").addEventListener("click", () => {
+        playerSelection = document.getElementById("input").value;
+        playGame();
+    });
 
-    //score appears after pressing buttons
-    let score = document.getElementById("score");
-    let scoreboard = document.getElementById("scoreboard");
+    // Selection player via text input
+    /*function getUserInput() {
+        let userInput = document.getElementById("input").innerText
+
+        //cover rock and Rock
+        userInput = userInput.toLowerCase();
+
+        if (userInput === "rock" || userInput === "paper" || userInput === "scissors") {
+            return userInput;
+        } else {
+            return prompt("Error!\nPlease use only 'rock, paper or scissors'");
+        }
+        console.log("input user", userInput);
+        console.log(getUserInput("test"));
+    }*/
+
 
     function playGame() {
         //setup a random number by computer
@@ -48,26 +67,28 @@
         } else {
             computerSelection = "scissors";
         }
-        console.log("computerSelection", computerSelection);
+        console.log("computerSelection: ", computerSelection);
         checkWinner();
-        //setup a function to compare winners and return result
 
-        console.log(checkWinner);
+        //setup a function to compare winners and return result
         if (checkWinner() === "player") {
             result += " wins!";
-            playerScore++; //update score
+            return playerScore++; //update score
         } else if (checkWinner() === "computer") {
             result += " wins!";
-            computerScore++;
+            return computerScore++;
         } else {
             result = "It's a draw!"
         }
 
-        //output score into div score and scoreboard
-        score.innerHTML = "Player: [ " + computerScore + " ] Computer: [ " + computerScore + " ]";
 
         //output player and computer's selections
-        scoreboard.innerHTML = "Player: [ " + playerSelection + " ] Computer: [ " + computerSelection + " ]"
+        let score = document.getElementById("score");
+        score.innerHTML = "PLAYER: [ " + playerSelection + " ] COMPUTER: [ " + computerSelection + " ]"
+
+
+        //let scoreboard = document.getElementById("scoreboard");
+        //scoreboard.innerHTML = "Player: [ " + computerScore + " ]\n Computer: [ " + computerScore + " ]";
     }
 
     //Determine the winner
@@ -96,27 +117,18 @@
             console.log(checkWinner)
         }
     }
+
+    // refresh page = reset
+    const refreshButton = document.querySelector(".reset");
+    const refreshPage = () => {
+        location.reload();
+        document.getElementById("input").value = ""; // make textfield empty again
+    }
+    refreshButton.addEventListener('click', refreshPage);
+
 })
 ();
 
-/*//input textfield
-let userInput = document.getElementById("input").innerText
-
-function getUserInput() {
-
-    //cover rock and Rock
-    userInput = userInput.toLowerCase();
-
-    if (userInput === "rock" || userInput === "paper" || userInput === "scissors") {
-        return userInput;
-    } else {
-        return prompt("Error!\nPlease use only 'rock, paper or scissors'");
-    }
-    //console.log(getUserInput("test"))
-}*/
-
-/*reset bottom
-document.getElementById("reset").reset();*/
 
 /* original code, where I got stuck
 
