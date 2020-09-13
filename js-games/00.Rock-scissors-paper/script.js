@@ -34,26 +34,16 @@
     });
     // Input from player via textfield
     document.getElementById("play").addEventListener("click", () => {
-        playerSelection = document.getElementById("input").value;
+        let userInput = playerSelection = document.getElementById("input").value;
         playGame();
-    });
-
-    // Selection player via text input
-    /*function getUserInput() {
-        let userInput = document.getElementById("input").innerText
-
-        //cover rock and Rock
-        userInput = userInput.toLowerCase();
 
         if (userInput === "rock" || userInput === "paper" || userInput === "scissors") {
             return userInput;
         } else {
-            return prompt("Error!\nPlease use only 'rock, paper or scissors'");
+            document.getElementById("input").value = ""; // make textfield empty again
+            return alert("ERROR!\nPlease complete the field and use only 'rock, paper or scissors'");
         }
-        console.log("input user", userInput);
-        console.log(getUserInput("test"));
-    }*/
-
+    });
 
     function playGame() {
         //setup a random number by computer
@@ -80,12 +70,13 @@
         } else {
             result = "It's a draw!"
         }
-
+        console.log("who is the winner?", result)
 
         //output player and computer's selections
         let score = document.getElementById("score");
         score.innerHTML = "PLAYER: [ " + playerSelection + " ] COMPUTER: [ " + computerSelection + " ]"
-
+        let compare = document.getElementById("compare");
+        compare.innerHTML = "Who is the winner?";
 
         //let scoreboard = document.getElementById("scoreboard");
         //scoreboard.innerHTML = "Player: [ " + computerScore + " ]\n Computer: [ " + computerScore + " ]";
@@ -130,7 +121,7 @@
 ();
 
 
-/* original code, where I got stuck
+/* original code, got stock and reshuffled the code (see above)
 
 (() => {
     //user clicks on the button + shows in text description
