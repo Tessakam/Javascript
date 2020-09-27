@@ -15,11 +15,11 @@
 (function() {
 
     let input = document.getElementById("slider");
-    target = document.getElementById("target");
+    target = document.getElementById("target"); // shows 499999999
 
-    target.innerHTML = `${input.value}` //using text template (similar as console.log) tip from Awet
+    target.innerHTML = `${input.value}`; //using text template (similar as console.log) tip from Awet
 
-    input.addEventListener("input", function(){
-        target.innerHTML = `${input.value}`;},0);
+    input.addEventListener("input", function(){ // input zie HTML
+        target.innerHTML = `${0 + input.value}`;});
     })
 ();
